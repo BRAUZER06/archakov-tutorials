@@ -19,7 +19,7 @@ import React from 'react';
 //     }
 // }
 
-const Profile = ({ name, registredAt }) => {g
+const Profile = ({ name, registredAt }) => {
     const regDate = (date) =>
         date.toLocaleString('ru', {
             month: 'long',
