@@ -5,9 +5,9 @@ const Form = () => {
     let password = '';
 
     const handleChange = (e) => {
-        if (e.target.id === 'email') {
+        if (e.target.name === 'email') {
             email = e.target.value;
-        } else if (e.target.id === 'password') {
+        } else if (e.target.name === 'password') {
             password = e.target.value;
         }
     };
@@ -16,6 +16,8 @@ const Form = () => {
         e.preventDefault();
         if (email.trim() && password.trim()) {
             console.log({ email, password });
+            email = '';
+            password = '';
             e.target.reset();
         } else {
             alert('Введите корректные данные!');
@@ -26,11 +28,16 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="email" />
-                <input onChange={handleChange} type="text" id="email" placeholder="E-mail" />
+                <input onChange={handleChange} type="text" name="email" placeholder="E-mail" />
             </div>
             <div>
                 <label htmlFor="password" />
-                <input onChange={handleChange} type="password" id="password" placeholder="Пароль" />
+                <input
+                    onChange={handleChange}
+                    type="password"
+                    name="password"
+                    placeholder="Пароль"
+                />
             </div>
             <button type="submit">Войти</button>
         </form>
