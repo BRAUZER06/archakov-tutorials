@@ -1,12 +1,12 @@
 import React from 'react';
-import Profile from './components/Profile';
+import ProfileFunc from './components/ProfileFunc';
 
 import './App.css';
 
 const App = () => {
     return (
         <div>
-            <Profile name="Вася Пупкин" registredAt={new Date(2021, 5, 22)} />
+            <ProfileFunc name="Вася Пупкин" registredAt={new Date(2021, 5, 22)} />
         </div>
     );
 };
