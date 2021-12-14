@@ -1,7 +1,23 @@
-*,
+/* *,
 *::before,
 *::after {
     box-sizing: border-box;
     outline: none;
     font-family: 'Noto Sans Display', sans-serif;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4edfa;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
 }
