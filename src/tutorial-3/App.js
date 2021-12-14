@@ -3,6 +3,8 @@ import './App.css';
 import Tab from './components/Tab';
 
 const App = () => {
+    const [activeIndex, setActiveIndex] = React.useState(0);
+
     const tabs = [
         {
             id: 1,
@@ -33,8 +35,6 @@ const App = () => {
         },
     ];
 
-    const [activeItem, setActiveItem] = React.useState(0);
-
     return (
         <div id="app">
             <div className="app-container">
@@ -48,8 +48,8 @@ const App = () => {
                                 inputId={tab.inputId}
                                 title={tab.title}
                                 description={tab.description}
-                                activeItem={activeItem}
-                                setActiveItem={setActiveItem}
+                                activeIndex={activeIndex}
+                                setActiveIndex={setActiveIndex}
                             />
                         );
                     })}
