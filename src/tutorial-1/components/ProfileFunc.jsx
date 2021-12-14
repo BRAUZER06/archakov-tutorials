@@ -2,11 +2,15 @@ import React from 'react';
 
 const ProfileFunc = ({ name, registredAt }) => {
     const regDate = (date) =>
-        date.toLocaleString('ru', {
-            month: 'long',
-            day: 'numeric',
-            year: 'numeric',
-        });
+        date
+            .toLocaleString('ru', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric',
+            })
+            .split(' ')
+            .slice(0, -1)
+            .join(' ');
 
     return (
         <div>
