@@ -5,7 +5,7 @@ const tasksList = document.querySelector('.tasks');
 const addBtn = document.querySelector('.addTask');
 
 const handleClickAdd = () => {
-    if (input.value === '' || !input.value.trim()) {
+    if ( !input.value.trim()) {
         alert('Поле не должно быть пустым');
     } else {
         tasks = [...tasks, input.value];
