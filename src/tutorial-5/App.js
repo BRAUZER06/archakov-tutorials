@@ -51,17 +51,12 @@ const App = () => {
         'дурак',
     ];
 
-    const renderAdjective = (arrayText) =>
-        arrayText[Math.floor(Math.random() * adjectivesArr.length)];
-
-    const renderNoun = (arrayText) => arrayText[Math.floor(Math.random() * nounsArr.length)];
+    const renderWord = (arrayText) => arrayText[Math.floor(Math.random() * arrayText.length)];
 
     const renderPhrase = () => {
         setPhrases((prev) => [
             ...prev,
-            `${renderAdjective(adjectivesArr)} ${renderAdjective(adjectivesArr)} ${renderNoun(
-                nounsArr,
-            )}`,
+            `${renderWord(adjectivesArr)} ${renderWord(adjectivesArr)} ${renderWord(nounsArr)}`,
         ]);
     };
 
