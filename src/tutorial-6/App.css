@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+}
+
+.comments {
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+}
