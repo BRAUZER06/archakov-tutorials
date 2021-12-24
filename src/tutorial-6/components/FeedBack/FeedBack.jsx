@@ -34,14 +34,11 @@ export default function FeedBack({ addComment }) {
                 id,
                 fullName,
                 email,
-                createdAt: postDate(new Date(Date.now())),
+                createdAt: postDate(new Date()),
                 text,
             };
 
             addComment(newPost);
-            fullName = '';
-            email = '';
-            text = '';
             e.target.reset();
         } else {
             alert('Введите корректные данные!');

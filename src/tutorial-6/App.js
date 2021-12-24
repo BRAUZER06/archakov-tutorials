@@ -8,7 +8,7 @@ const App = () => {
     const [comments, setComments] = React.useState([]);
 
     React.useEffect(() => {
-        setComments(JSON.parse(localStorage.getItem('comments')));
+        setComments(JSON.parse(localStorage.getItem('comments')) || []);
     }, []);
 
     React.useEffect(() => {
@@ -20,18 +20,16 @@ const App = () => {
     };
 
     const deleteComment = (objId) => {
-        let newComments = comments.filter((item) => item.id !== objId);
+        const newComments = comments.filter((item) => item.id !== objId);
         setComments(newComments);
     };
 
     return (
         <div className="wrapper">
-            {comments.length ? (
+            {comments.length > 0 && (
                 <div className="comments">
                     {<Comments comments={comments} deleteComment={deleteComment} />}
                 </div>
-            ) : (
-                ''
             )}
 
             <br />

@@ -13,10 +13,6 @@ const style = {
 };
 
 export default function Comments({ comments, deleteComment }) {
-    const onDelete = (id) => {
-        deleteComment(id);
-    };
-
     return (
         <List sx={style}>
             <h3>Отзывы:</h3>
@@ -27,12 +23,9 @@ export default function Comments({ comments, deleteComment }) {
                             <ListItemAvatar>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
                             </ListItemAvatar>
-                            <ListItemText
-                                primary={comment.fullName}
-                                secondary={<React.Fragment>{comment.text}</React.Fragment>}
-                            />
+                            <ListItemText primary={comment.fullName} secondary={comment.text} />
                             <Button
-                                onClick={() => onDelete(comment.id)}
+                                onClick={() => deleteComment(comment.id)}
                                 size="small"
                                 type="submit"
                                 variant="text"
