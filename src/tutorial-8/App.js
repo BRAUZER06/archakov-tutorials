@@ -9,12 +9,11 @@ function App() {
     const { handleSubmit, register, formState, reset } = useForm();
 
     const onSubmit = (values) => {
-        console.log('ФОРМА!', values);
-        reset();
+        reset({ firstName: '', lastName: '', email: '', password: '' });
     };
 
     const clearForm = () => {
-        reset();
+        reset({ firstName: '', lastName: '', email: '', password: '' });
     };
 
     // console.log(formState.errors);
