@@ -4,16 +4,15 @@ import '../index.css';
 const App = () => {
     const [products, setProducts] = React.useState([]);
 
-    // const getUsers = () => {
-    //     setProducts([{ id: 1, name: 'первый' }]);
-    //     fetch('https://61464fc88f2f4e001730402e.mockapi.io/items').then(res => res.json()).then(data => setProducts(data))
-    // };
-
     const getProducts = async () => {
         try {
             const response = await fetch('https://61464fc88f2f4e001730402e.mockapi.io/items');
             const data = await response.json();
-            setProducts(data);
+            if (response.ok) {
+                setProducts(data);
+            } else {
+                throw Error('Ошибка при запросе данных');
+            }
         } catch (error) {
             alert('Ошибка при запросе данных');
             console.error(error);
