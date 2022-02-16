@@ -1,20 +1,20 @@
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-
-:root {
-    --main-color: rgba(255, 255, 255, 0.7);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
 
 body {
-    background-color: #141c2f;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 400;
-    color: var(--main-color);
+  background-color: rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+  margin: 0 auto !important;
+  padding-top: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  margin-right: 20px;
 }
